@@ -25,7 +25,8 @@
 <input id="input" placeholder="Input SomeThing" type="text">
 <button id="btn1">Test</button>
 <button id="btn2">Change</button>
-<img alt="" src="assets/1996_WC_Win.jpg" width="300px">
+<button id="btn3">Image</button>
+<img alt="" id="img1" src="assets/1996_WC_Win.jpg" width="300px">
 
 <script>
     document.getElementsByTagName('h1')[0].innerText = 'Hello JavaScript';
@@ -54,11 +55,16 @@
 
     // Select Button 2
     document.getElementById('btn2').addEventListener('click', function () {
-        document.getElementById('btn2').addEventListener('click', function () {
-            const value = document.getElementById('input').value;
-            document.getElementsByTagName("h1")[0].innerText= value;
-        })
+        const value = document.getElementById('input').value;
+        document.getElementsByTagName("h1")[0].innerText = value;
     })
+
+    // Select Button 3
+    document.getElementById('btn3').addEventListener('click', function () {
+        document.getElementById('input').value;
+        document.getElementById('img1').setAttribute('src',document.getElementById('input').value);
+    })
+
 </script>
 
 </body>
