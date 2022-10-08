@@ -26,7 +26,14 @@
 <button id="btn1">Test</button>
 <button id="btn2">Change</button>
 <button id="btn3">Image</button>
+<button id="btn4">list</button>
 <img alt="" id="img1" src="assets/1996_WC_Win.jpg" width="300px">
+
+<ul>
+    <li>ABSD</li>
+    <li>GDSE</li>
+    <li>CMJD</li>
+</ul>
 
 <script>
     document.getElementsByTagName('h1')[0].innerText = 'Hello JavaScript';
@@ -62,7 +69,12 @@
     // Select Button 3
     document.getElementById('btn3').addEventListener('click', function () {
         document.getElementById('input').value;
-        document.getElementById('img1').setAttribute('src',document.getElementById('input').value);
+        document.getElementById('img1').setAttribute('src', document.getElementById('input').value);
+    })
+
+    // Select Button 4 ==> LIst
+    document.getElementById('btn4').addEventListener('click', function () {
+        document.querySelector("ul").innerHTML += "<li>" + document.getElementById('input').value +"</li>";
     })
 
 </script>
