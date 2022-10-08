@@ -16,33 +16,49 @@
 <h1>Institute Of Software Engineering</h1>
 <h2 id="secondTitle">GDSE</h2>
 <h3 class="h3Class">Galle</h3>
-<p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut cupiditate, dicta dolore doloribus et eum id maxime
+<p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut cupiditate, dicta dolore doloribus et eum id
+    maxime
     molestiae, neque nisi obcaecati odio perspiciatis praesentium quisquam quo sequi veritatis voluptatem
     voluptatum.
 </p>
 <hr>
-<input placeholder="Input SomeThing" type="text">
-<button>Test</button>
-<img src="assets/1996_WC_Win.jpg" alt="" width="300px">
+<input id="input" placeholder="Input SomeThing" type="text">
+<button id="btn1">Test</button>
+<button id="btn2">Change</button>
+<img alt="" src="assets/1996_WC_Win.jpg" width="300px">
 
 <script>
-    document.getElementsByTagName('h1')[0].innerText='Hello JavaScript';
-    document.getElementById('secondTitle').style.fontSize='30';
+    document.getElementsByTagName('h1')[0].innerText = 'Hello JavaScript';
+    document.getElementById('secondTitle').style.fontSize = '30';
 
-    document.getElementsByTagName('h2')[0].innerText='IJSE';
+    document.getElementsByTagName('h2')[0].innerText = 'IJSE';
 
-    document.getElementsByClassName('h3Class')[0].style.color='red';
+    document.getElementsByClassName('h3Class')[0].style.color = 'red';
 
-    document.getElementById('p1').style.backgroundColor='red';
-    document.getElementById('p1').style.color='white';
+    document.getElementById('p1').style.backgroundColor = 'red';
+    document.getElementById('p1').style.color = 'white';
 
     // QuerySelector --> Select the First matching element form the DOM
-    document.querySelector('input').value='C001';
+    document.querySelector('input').value = 'C001';
 
     // QuerySelectorAll --> Select the All matching element form the DOM => Node List
-    document.querySelectorAll('h1')[0].style.color='blue';
+    document.querySelectorAll('h1')[0].style.color = 'blue';
 
+    // Select Button
+    document.getElementById('btn1').addEventListener('click', function () {
+        alert('Are You Sure?')
+        // document.getElementById('secondTitle').innerText='';
 
+        document.getElementById('secondTitle').remove();
+    })
+
+    // Select Button 2
+    document.getElementById('btn2').addEventListener('click', function () {
+        document.getElementById('btn2').addEventListener('click', function () {
+            const value = document.getElementById('input').value;
+            document.getElementsByTagName("h1")[0].innerText= value;
+        })
+    })
 </script>
 
 </body>
