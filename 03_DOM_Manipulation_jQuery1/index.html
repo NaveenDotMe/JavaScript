@@ -16,6 +16,7 @@
 <h2 id="title2">GDSE</h2>
 <h3 class="h3Class">Galle</h3>
 <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut cupiditate, dicta dolore doloribus et eum id
+<p id="p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut cupiditate, dicta dolore doloribus et eum id
     maxime
     molestiae, neque nisi obcaecati odio perspiciatis praesentium quisquam quo sequi veritatis voluptatem
     voluptatum.
@@ -38,17 +39,17 @@
 <script src="assets/js/my-script.js"></script>
 <script>
 
-      //Type Selector
+    /*  //Type Selector
     $("h1").text("jQuery");
 
     //ID Selector
-    $("#secondTitle").text("Lets Begun");
+    $("#secondTitle").text("Lets Begun");*/
 
     // Change Default Selector Symbol
-    var RS = jQuery.noConflict();
-    RS("h1").text("RS Selector")
+    /*var RS = jQuery.noConflict();
+    RS("h1").text("RS Selector")*/
 
-    // ID Selector
+    /*// ID Selector
     $("#title1").css('color', 'red');
 
     // Clas Selector
@@ -63,7 +64,22 @@
     //Pseudo Selector
     $("li:last-child").css('color','red');
     $("li:first-child").css('color','green');
-    $("li:nth-child(2)").css('color','blue');
+    $("li:nth-child(2)").css('color','blue'); */
+
+
+    // What About CSS Combinators
+
+    // descendant selector (space)
+
+
+    // child selector (>)
+    $("body>h1").css('color', 'red');
+
+    // adjacent sibling selector (+)
+    $("h3+p").css('color', 'yellow');
+
+    // general sibling selector (~)
+    $("h3+p").css('color', 'green');
 
 
 </script>
