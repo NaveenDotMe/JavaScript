@@ -12,8 +12,8 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Institute Of Software Engineering</h1>
-<h2 id="secondTitle">GDSE</h2>
+<h1 id="title1">Institute Of Software Engineering</h1>
+<h2 id="title2">GDSE</h2>
 <h3 class="h3Class">Galle</h3>
 <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut cupiditate, dicta dolore doloribus et eum id
     maxime
@@ -38,16 +38,32 @@
 <script src="assets/js/my-script.js"></script>
 <script>
 
-    /*  //Type Selector
+      //Type Selector
     $("h1").text("jQuery");
 
     //ID Selector
-    $("#secondTitle").text("Lets Begun");*/
+    $("#secondTitle").text("Lets Begun");
 
     // Change Default Selector Symbol
-    /*var RS = jQuery.noConflict();
-    RS("h1").text("RS Selector")*/
+    var RS = jQuery.noConflict();
+    RS("h1").text("RS Selector")
 
+    // ID Selector
+    $("#title1").css('color', 'red');
+
+    // Clas Selector
+    $(".h3Class").text("Class Selector Applied")
+
+    // Universal Selector
+    console.log($("*").text());
+
+    // Attribute Selector
+    $("[id]").remove();
+
+    //Pseudo Selector
+    $("li:last-child").css('color','red');
+    $("li:first-child").css('color','green');
+    $("li:nth-child(2)").css('color','blue');
 
 
 </script>
